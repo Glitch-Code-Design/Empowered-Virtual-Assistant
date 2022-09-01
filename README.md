@@ -6,5 +6,9 @@
 Photo Credits :
 
     https://pixabay.com/
+    
+Icon Credits : 
+
+    https://fontawesome.com/icons
 
 Any & All feedback is appreciated.
