@@ -3,9 +3,9 @@
 
  I'm a self taught Web Designer
 
-Photo Credits :
+Illustration Credits :
 
-    https://pixabay.com/
+    https://undraw.co/illustrations
     
 Icon Credits : 
 
