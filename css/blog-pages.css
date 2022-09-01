@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root {
+    --primary: #1aa5a3;
+    --primary-dark: #107977;
+    --font-light: #d3cfcf;
+    --font-dark: #242323;
+    --bg-light: #f8f8ff;
+    --bg-dark: #141414;
+}
+::selection {
+    background-color: var(--primary);
+}
+/*////////// CUSTOM SCROLLBAR START //////////*/
+html {
+    scrollbar-color: var(--primary) transparent;
+    scrollbar-width: thin;
+}
+html::-webkit-scrollbar {
+    width: .55em;
+}
+html::-webkit-scrollbar-track {
+    margin-block-start: 1rem;
+    margin-block-end: .15rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    border-radius: 100vw;
+    background: var(--primary);
+}
+/*////////// CUSTOM SCROLLBAR END //////////*/
+
+/*////////// MAIN START //////////*/
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    background: var(--bg-light);
+    cursor: default;
+}
+.container {    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--font-dark);
+    animation: fadeInOnLoad 1s ease-in;
+}
+@keyframes fadeInOnLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.container header {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2.5rem 0 2rem 0;
+    letter-spacing: .25px;
+    font-size: 1.7rem;
+}
+.container p {
+    font-size: 1rem;
+    padding: 1.5rem;
+}
+.container span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.container ul {
+    padding: 2rem;
+}
+.container ul li {
+    font-size: 1rem;
+    margin: 1.5rem 0 0 0;
+}
+/*////////// MAIN START //////////*/
+
+/*////////// MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 1023px) {
+    .container header {
+        font-size: 1.3rem;
+    }
+    .container p,
+    .container ul li {
+        font-size: .9rem;
+    }
+    .container span {
+        font-size: 1rem;
+    }
+}
+/*////////// MEDIA QUERY'S END //////////*/
+
+/*////////// DARK MODE COLOR SCHEME START //////////*/
+@media screen and ( prefers-color-scheme: dark ) {
+    html {
+        scrollbar-color: var(--primary-dark)transparent;
+    }
+     html::-webkit-scrollbar-thumb {
+        background: var(--primary-dark);
+    }
+    body {
+        background: var(--bg-dark);
+    }
+    .container {
+        color: var(--font-light);
+    }
+    .container header {
+        opacity: 97%;
+    }
+}
+/*////////// DARK MODE COLOR SCHEME END //////////*/

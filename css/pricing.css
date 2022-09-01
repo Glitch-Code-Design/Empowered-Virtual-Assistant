@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root {
+    --primary: #1aa5a3;
+    --primary-dark: #107977;
+    --font-light: #d3cfcf;
+    --font-dark: #242323;
+    --bg-light: #f8f8ff;
+    --bg-dark: #141414;
+    --btn-font: #f3f3f3;
+}
+::selection {
+    background-color: var(--primary);
+}
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    background: var(--bg-light);
+    cursor: default;
+}
+a:visited {
+    color: var(--font-dark);
+}
+a:hover {
+    color: var(--primary);
+}
+/*////////// NAVBAR START //////////*/
+nav .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 81rem;
+    margin: 0 auto;
+    padding: .15rem;
+}
+nav .logo,
+nav ul {
+    animation: 1s fadeInOnLoad ease-in;
+}
+@keyframes fadeInOnLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+nav .logo img {
+    position: relative;
+    top: .5rem;
+    left: 1.5rem;
+    width: 13rem;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 4rem;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.025rem;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    color: var(--font-dark);
+    transition: 250ms all ease;
+}
+.wrapper.active .drop-down-menu .bars {
+    background-color: transparent;
+}
+.wrapper.active .bars:before {
+    transform: translateY(0) rotate(-45deg);
+}
+.wrapper.active .bars::after {
+    transform: translateY(0) rotate(45deg);
+}
+.drop-down-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 2rem;
+    width: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 5;
+}
+.drop-down-menu .bars {
+    height: 3px;
+    width: 100%;
+    position: relative;
+    background-color: var(--primary);
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    transition: 400ms;
+}
+.bars::before,
+.bars::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 5px;
+    transition: 400ms;
+}
+.bars::before {
+    transform: translateY(-8px);
+}
+.bars::after {
+    transform: translateY(8px);
+}
+/*////////// NAVBAR END //////////*/
+
+/*////////// MAIN START //////////*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 81rem;
+    margin: 30px auto;
+}
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    height: 75vh;
+    width: 75%;
+    background-color: var(--primary);
+    color: var(--btn-font);
+    border-radius: 10px;
+    box-shadow: 0 6px 8px 1px rgba(0, 0, 0, .7);
+    transition: 400ms ease all;
+    animation: card 750ms ease-in;
+}
+@keyframes card {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.card-container:hover {
+    transform: translateY(-1rem);
+}
+.card-container header,
+.card-container .pricing,
+.card-container .services {
+    height: 100%;
+    width: 100%;
+}
+
+.card-container header {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    position: relative;
+    top: 1rem;
+}
+.card-container header h4 {
+    font-size: 1.055rem;
+    opacity: 75%;
+    letter-spacing: 1.5px;
+}
+.card-container .pricing {
+    font-size: 2.8rem;
+    opacity: 90%;
+}
+.pricing p {
+    text-transform: capitalize;
+    font-size: .8rem;
+}
+.pricing span {
+    position: relative;
+    right: .5rem;
+    bottom: .25rem;
+    font-size: .9rem;
+    letter-spacing: .5px;
+    opacity: 80%;
+}
+.services h4 {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    opacity: 95%;
+    letter-spacing: .5px;
+}
+.services p {
+    font-size: .9rem;
+    text-transform: capitalize;
+    opacity: 85%;
+    padding: .25rem;
+}
+.services span {
+    position: relative;
+    top: 1.5rem;
+    font-size: .8rem;
+}
+/*////////// MAIN END //////////*/
+
+/*////////// MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 914px) {
+    .no-scroll {
+        overflow-y: hidden;
+    }
+    @keyframes fadeInOnLoad {
+        0% {
+            opacity: 1;
+        }
+    }
+    .wrapper.active .links {
+        transform: translateY(0);
+    }
+    nav .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 4rem;
+    }
+    nav .container .links {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary);
+        transform: translateY(-100%);
+        transition: 500ms;
+        z-index: 5;
+    }
+    nav .links ul {
+        flex-direction: column;
+    }
+    nav .container .links ul li {
+        position: relative;
+        font-size: .9rem;
+        text-align: center;
+        margin: 0 auto;
+        padding: 2.5rem;
+    }
+    nav .links ul li a {
+        color: var(--btn-font);
+    }
+    .drop-down-menu {
+        display: flex;
+        position: absolute;
+        right: 87%;
+    }
+    .wrapper.active .bars::before,
+    .wrapper.active .bars::after {
+        background-color: var(--btn-font);
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-gap: 1.25rem;
+    }
+    .card-container {
+        height: 55vh;
+        width: 75%;
+    }
+}
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+    .no-scroll {
+        overflow-y: hidden;
+    }
+    @keyframes fadeInOnLoad {
+        0% {
+            opacity: 1;
+        }
+    }
+    .wrapper.active .links {
+        transform: translateY(0);
+    }
+    nav .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 4rem;
+    }
+    nav .container .links {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary);
+        transform: translateY(-100%);
+        transition: 500ms;
+        z-index: 5;
+    }
+    nav .links ul {
+        flex-direction: column;
+    }
+    nav .container .links ul li {
+        position: relative;
+        font-size: .9rem;
+        text-align: center;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+    nav .links ul li a {
+        color: var(--btn-font);
+    }
+    .wrapper.active .bars::before,
+    .wrapper.active .bars::after {
+        background-color: var(--btn-font);
+    }
+    .drop-down-menu {
+        display: flex;
+        position: absolute;
+        right: 90%;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-gap: 1.25rem;
+    }
+    .card-container {
+        height: 100vh;
+        width: 65%;
+    }
+}
+/*////////// MEDIA QUERY'S END //////////*/
+
+/*////////// DARK MODE MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 1023px) and (prefers-color-scheme: dark) {
+    nav .container .links {
+        background-color: var(--primary-dark);
+    }
+}
+/*////////// DARK MODE MEDIA QUERY'S END //////////*/
+
+/*////////// DARK MODE COLOR SCHEME START //////////*/
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: var(--bg-dark);
+    }
+    a:visited {
+        color: var(--font-light);
+    }
+    nav .links ul li a {
+        color: var(--font-light);
+    }
+    nav .links ul li a:hover {
+        color: var(--primary);
+    }
+    .card-container {
+        background: var(--primary-dark);
+    }
+    .card-container header,
+    .card-container .pricing {
+        opacity: 80%;
+    }
+    .pricing p,
+    .pricing span,
+    .services h4, 
+    .services p {
+        opacity: 85%;
+    }
+}
+/*////////// DARK MODE COLOR SCHEME END //////////*/

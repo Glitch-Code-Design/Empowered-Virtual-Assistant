@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1aa5a3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#107977" media="(prefers-color-scheme: dark)">
+    <title>Empowered Virtual Assistant</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script defer src="../script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!--NAVBAR START-->
+        <nav>
+            <!--NAVBAR START-->
+            <div class="container">
+                <div class="logo">
+                    <img draggable="false" src="../logo.png" alt="logo">
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="../index.html">home</a></li>
+                        <li><a href="./pricing.html">pricing</a></li>
+                        <li><a href="./reviews.html">review</a></li>
+                        <li><a href="./about.html">about</a></li>
+                        <li><a href="./blog.html">blog</a></li>
+                    </ul>
+                </div>
+                <!--HAMBURGER MENU START-->
+                <div class="drop-down-menu">
+                    <div class="bars"></div>
+                </div>
+                <!--HAMBURGER MENU END-->
+            </div>
+            <!--NAVBAR END-->
+        </nav>
+        <!--NAVBAR END-->
+
+        <!--MAIN START-->
+        <main>
+            <div class="container">
+                <div class="contact-form">
+                    <form>
+                        <input class="form-input" type="text" placeholder="Name:" minlength="1" maxlength="50">
+                        <input class="form-input" type="email" placeholder="Email:" minlength="1" maxlength="75">
+                        <input class="form-input" type="number" placeholder="Phone:">
+                        <textarea placeholder="Insert Message Here:"></textarea maxlength="500">
+                        <div role="button" class="btn">
+                            <a href="#">submit</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--FOOTER/ MODAL START-->
+            <footer>
+                <div class="consultation">
+                    <h4>
+                        <a href="#consultation">sign up for a free 30 minute consultation</a>
+                    </h4>
+                </div>
+            </footer>
+            <div id="consultation" class="modal-container modal">
+                <div class="modal-popup">
+                    <h3>
+                        Thanks for signing up!
+                    </h3>
+                    <p>
+                        We will use your email to contact you to book an appointment, this way you can see if we are a right fit for you
+                    </p>
+                    <form>
+                        <input class="form-input" type="email" placeholder="Sign up with your email:" minlength="1" maxlength="75">
+                    </form>
+                    <p>
+                        signup to receive our newsletter, we provide the latest news & information straight to your inbox, if this is something your interested in, then click on the box below when you submit your email
+                    </p>
+                    <div class="newsletter">
+                        <input id="checkbox" type="checkbox">
+                        <label for="checkbox">sign up for our newsletter</label>
+                    </div>
+                    <div role="button" class="btn">
+                        <a href="#">done</a>
+                    </div>
+                </div>
+            </div>
+            <!--FOOTER/ MODAL END-->
+        </main>
+    </div>
+</body>

@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root {
+    --primary: #1aa5a3;
+    --primary-dark: #107977;
+    --font-light: #d3cfcf;
+    --font-dark: #242323;
+    --bg-light: #f8f8ff;
+    --bg-dark: #141414;
+    --btn-submit-light: #f3f3f3;
+    --btn-submit-dark: #3d3c3c;
+    --btn-font: #f3f3f3;
+    --btn-bg: #14918f;
+}
+::selection {
+    background-color: var(--primary);
+}
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    background: var(--bg-light);
+    cursor: default;
+}
+a:visited {
+    color: var(--font-dark);
+}
+a:hover {
+    color: var(--primary);
+}
+/*////////// NAVBAR START //////////*/
+nav .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 81rem;
+    margin: 0 auto;
+    padding: .15rem;
+}
+nav .logo,
+nav ul {
+    animation: 1s fadeInOnLoad ease-in;
+}
+@keyframes fadeInOnLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+nav .logo img {
+    position: relative;
+    top: .5rem;
+    left: 1.5rem;
+    width: 13rem;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 4rem;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.025rem;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    color: var(--font-dark);
+    transition: 250ms all ease;
+}
+.wrapper.active .drop-down-menu .bars {
+    background-color: transparent;
+}
+.wrapper.active .bars:before {
+    transform: translateY(0) rotate(-45deg);
+}
+.wrapper.active .bars::after {
+    transform: translateY(0) rotate(45deg);
+}
+.drop-down-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 2rem;
+    width: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 5;
+}
+.drop-down-menu .bars {
+    height: 3px;
+    width: 100%;
+    position: relative;
+    background-color: var(--primary);
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    transition: 400ms;
+}
+.bars::before,
+.bars::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 5px;
+    transition: 400ms;
+}
+.bars::before {
+    transform: translateY(-8px);
+}
+.bars::after {
+    transform: translateY(8px);
+}
+/*////////// NAVBAR END //////////*/
+
+/*////////// MAIN START //////////*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 55px auto;
+    max-width: 81rem;
+}
+.container .contact-form {
+    background-color: var(--primary);
+    width: 500px;
+    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    animation: contact-form 1s ease-in;
+}
+@keyframes contact-form {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.contact-form form {
+    margin: 3rem;
+}
+form input:focus {
+    color: var(--font-dark);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+form .form-input,
+form textarea {
+    color: var(--font-dark);
+    background-color: var(--bg-light);
+}
+form .form-input {
+    height: 40px;
+    width: 400px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: .8rem;
+}
+form textarea {
+    margin-top: 1rem;
+    height: 100px;
+    width: 400px;
+    font-size: .85rem;
+    outline: none;
+    resize: none;
+}
+form textarea:focus {
+    color: var(--font-dark);
+}
+#checkbox {
+    accent-color: var(--primary-dark);
+}
+form .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 1.25rem;
+}
+form .btn a {
+    padding: .35rem;
+    background-color: var(--bg-light);
+    color: var(--primary);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: .25px;
+    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .4);
+}
+.btn a:active {
+    transform: scale(.9);
+}
+/*////////// MAIN END //////////*/
+
+/*////////// FOOTER / MODAL START //////////*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--primary);
+    width: 100%;
+    padding: .25rem;
+    text-decoration: none;
+}
+footer .consultation h4 a {
+    font-size: .95rem;
+    color: var(--btn-font);
+    opacity: 95%;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    font-weight: 400;
+}
+.modal-container.modal {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 400ms all;
+}
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-container .modal-popup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    margin: 3rem 0 0 0;
+    height: 90%;
+    width: 750px;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+.modal-popup h3 {
+    position: relative;
+    bottom: 1.5rem;
+    text-align: center;
+    color: var(--btn-submit-light);
+    font-size: 1.2rem;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    opacity: 90%;
+}
+.modal-popup p{
+    font-size: 1rem;
+    color: var(--btn-font);
+    letter-spacing: .5px;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: capitalize;
+}
+.modal-popup form {
+    margin: 1.5rem 0 3rem 0;
+}
+.modal .newsletter {
+    display: block;
+    position: relative;
+    top: .85rem;
+}
+.modal label {
+    color: var(--btn-submit-light);
+    text-transform: capitalize;
+    font-size: .9rem;
+    letter-spacing: .25px;
+}
+.modal-popup a {
+    text-transform: capitalize;
+    color: var(--primary);
+    background: var(--btn-font);
+    padding: .35rem;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    top: 2.5rem;
+}
+/*////////// FOOTER / MODAL END //////////*/
+
+/*////////// MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 914px) {
+    .no-scroll {
+        overflow-y: hidden;
+    }
+    @keyframes fadeInOnLoad {
+        0% {
+            opacity: 1;
+        }
+    }
+    .wrapper.active .links {
+        transform: translateY(0);
+    }
+    nav .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 4rem;
+    }
+    nav .container .links {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary);
+        transform: translateY(-100%);
+        transition: 500ms;
+        z-index: 5;
+    }
+    nav .links ul {
+        flex-direction: column;
+    }
+    nav .container .links ul li {
+        position: relative;
+        font-size: .9rem;
+        text-align: center;
+        margin: 0 auto;
+        padding: 2.5rem;
+    }
+    nav .links ul li a {
+        color: var(--btn-font);
+    }
+    .drop-down-menu {
+        display: flex;
+        position: absolute;
+        right: 87%;
+    }
+    .wrapper.active .bars::before,
+    .wrapper.active .bars::after {
+        background-color: var(--btn-font);
+    }
+    .container {
+        margin: 65px 0 0 0;
+    }
+    .container .contact-form {
+    width: 65%;
+    }
+    .contact-form form {
+        margin: 1.5rem;
+    }
+    form .form-input,
+    form textarea  {
+        width: 100%;
+    }
+    form .btn {
+        top: .65rem;
+    }
+    form .btn a {
+        padding: .25rem;
+    }
+    footer .consultation h4 a {
+        font-size: .9rem;
+    }
+    .modal-container .modal-popup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 78vh;
+        min-width: 100%;
+        margin: 3rem 0 0 1.5rem;
+    }
+    .modal-popup h3 {
+        font-size: 1.1rem;
+    }
+    .modal-popup p {
+        font-size: .9rem;
+    }
+    .modal-popup a {
+        font-size: .9rem;
+        padding: .25rem;
+    }
+}
+@media screen and (max-width: 926px) and (orientation: landscape) {
+    .no-scroll {
+        overflow-y: hidden;
+    }
+    @keyframes fadeInOnLoad {
+        0% {
+            opacity: 1;
+        }
+    }
+    .wrapper.active .links {
+        transform: translateY(0);
+    }
+    nav .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 4rem;
+    }
+    nav .container .links {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary);
+        transform: translateY(-100%);
+        transition: 500ms;
+        z-index: 5;
+    }
+    nav .links ul {
+        flex-direction: column;
+    }
+    nav .container .links ul li {
+        position: relative;
+        font-size: .9rem;
+        text-align: center;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+    nav .links ul li a {
+        color: var(--btn-font);
+    }
+    .drop-down-menu {
+        display: flex;
+        position: absolute;
+        right: 87%;
+    }
+    .wrapper.active .bars::before,
+    .wrapper.active .bars::after {
+        background-color: var(--btn-font);
+    }
+    main .container {
+        margin: 75px auto;
+    }
+    .container .contact-form {
+        width: 500px;
+    }
+    footer {
+        display: none;
+    }
+}
+/*////////// MEDIA QUERY'S END //////////*/
+
+/*////////// DARK MODE MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 1023px) and (prefers-color-scheme: dark) {
+    nav .container .links {
+        background-color: var(--primary-dark);
+    }
+}
+/*////////// DARK MODE MEDIA QUERY'S END //////////*/
+
+/*////////// DARK MODE COLOR SCHEME START //////////*/
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: var(--bg-dark);
+    }
+    a:visited {
+        color: var(--font-light);
+    }
+    nav .links ul li a {
+        color: var(--font-light);
+    }
+    nav .links ul li a:hover {
+        color: var(--primary);
+    }
+    main .container .contact-form {
+        background: var(--primary-dark);
+    }
+    form .form-input,
+    form textarea,
+    form .btn a,
+    .modal-popup a {
+        background: var(--btn-submit-light);
+        opacity: 93%;
+    }
+    form .btn a,
+    .modal-popup a {
+        color: var(--primary-dark);
+    }
+    footer,
+    .modal-container .modal-popup {
+        background: var(--primary-dark);
+    }
+}
+/*////////// DARK MODE COLOR SCHEME END //////////*/

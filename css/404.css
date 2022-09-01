@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root {
+    --primary: #1aa5a3;
+    --primary-dark: #107977;
+    --font-light: #d3cfcf;
+    --font-dark: #3f3d56;
+    --bg-light: #f8f8ff;
+    --bg-dark: #141414;
+    --btn-font: #f3f3f3;
+}
+::selection {
+    background-color: var(--primary);
+}
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    background: var(--bg-light);
+    cursor: default;
+}
+a:visited {
+    color: var(--font-dark);
+}
+/*////////// MAIN START //////////*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 81rem;
+}
+img {
+    margin-top: 5.5rem;
+    position: relative;
+    width: 20rem;
+}
+header h2 {
+    font-size: 1.35rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var(--font-dark);
+    text-align: center;
+}
+.btn {
+    margin-top: 1.5rem;
+    letter-spacing: .5px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    padding: .5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 300ms ease all;
+}
+.btn a {
+    text-decoration: none;
+    color: var(--btn-font);
+}
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+/*////////// NAVBAR END //////////*/
+
+/*////////// MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 1024px) {
+    header h2 {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    img {
+        margin-top: 2rem;
+        width: 14rem;
+    }
+}
+/*////////// MEDIA QUERY'S END //////////*/
+
+/*////////// DARK MODE COLOR SCHEME START //////////*/
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: var(--bg-dark);
+    }
+    header h2 {
+        color: var(--font-light);
+        opacity: 90%;
+    }
+    img {
+        opacity: 94%;
+    }
+    .btn {
+        opacity: 90%;
+    }
+}
+/*////////// DARK MODE COLOR SCHEME END //////////*/
