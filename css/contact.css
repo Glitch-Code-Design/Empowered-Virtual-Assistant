@@ -66,6 +66,8 @@ nav .logo img {
     top: .5rem;
     left: 1.5rem;
     width: 13rem;
+    height: 100%;
+    max-width: 100%;
 }
 nav ul {
     display: flex;
@@ -82,6 +84,15 @@ nav ul li a {
     text-transform: capitalize;
     color: var(--font-dark);
     transition: 250ms all ease;
+}
+nav a:focus {
+    opacity: 100%;
+    outline: var(--primary) 2px solid;
+    padding: .25rem;
+}
+nav a:focus:not(:focus-visible) {
+    outline: none;
+    padding: 0;
 }
 .wrapper.active .drop-down-menu .bars {
     background-color: transparent;
@@ -184,6 +195,14 @@ form .form-input {
     outline: none;
     font-size: .8rem;
 }
+form .form-input:focus {
+    opacity: 100%;
+    outline: 3px solid var(--primary-dark);
+}
+form textarea:focus {
+    opacity: 100%;
+    outline: 3px solid var(--primary-dark);
+}
 form textarea {
     margin-top: 1rem;
     height: 100px;
@@ -192,11 +211,14 @@ form textarea {
     outline: none;
     resize: none;
 }
-form textarea:focus {
-    color: var(--font-dark);
-}
 #checkbox {
     accent-color: var(--primary-dark);
+}
+#checkbox:focus-visible {
+    outline: var(--bg-dark) 2px solid;
+}
+#checkbox:focus:not(:focus-visible) {
+    outline: none;
 }
 form .btn {
     display: flex;
@@ -216,6 +238,12 @@ form .btn a {
     text-transform: capitalize;
     letter-spacing: .25px;
     box-shadow: 0 5px 7px 0 rgba(0, 0, 0, .4);
+}
+form .btn a:focus-visible {
+    outline: var(--bg-dark) solid 2px;
+}
+form .btn a:focus:not(:focus-visible) {
+    outline: none;
 }
 .btn a:active {
     transform: scale(.9);
@@ -241,6 +269,13 @@ footer .consultation h4 a {
     text-transform: capitalize;
     letter-spacing: .5px;
     font-weight: 400;
+}
+footer .consultation h4 a:focus-visible {
+    outline: var(--bg-dark) solid 2px;
+    padding: .25rem;
+}
+footer .consultation h4 a:focus:not(:focus-visible) {
+    outline: none;
 }
 .modal-container.modal {
     position: absolute;
@@ -313,6 +348,12 @@ footer .consultation h4 a {
     text-decoration: none;
     position: relative;
     top: 2.5rem;
+}
+.modal-popup a:focus-visible {
+    outline: var(--bg-dark) solid 2px;
+}
+.modal-popup a:focus:not(:focus-visible) {
+    outline: none;
 }
 /*////////// FOOTER / MODAL END //////////*/
 
@@ -511,6 +552,17 @@ footer .consultation h4 a {
     .modal-popup a {
         background: var(--btn-submit-light);
         opacity: 93%;
+    }
+    #checkbox {
+        accent-color: var(--bg-dark);
+    }
+    form .form-input:focus {
+        opacity: 100%;
+        outline: 3px solid var(--bg-dark);
+    }
+    form textarea:focus {
+        opacity: 100%;
+        outline: 3px solid var(--bg-dark);
     }
     form .btn a,
     .modal-popup a {

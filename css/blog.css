@@ -31,6 +31,11 @@ a:visited {
 a:hover {
     color: var(--primary);
 }
+img {
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    color: var(--primary);
+}
 /*////////// CUSTOM SCROLLBAR START //////////*/
 html {
     scrollbar-color: var(--primary) transparent;
@@ -82,7 +87,9 @@ nav .logo img {
     position: relative;
     top: .5rem;
     left: 1.5rem;
+    height: 100%;
     width: 13rem;
+    max-width: 100%;
 }
 nav ul {
     display: flex;
@@ -99,6 +106,14 @@ nav ul li a {
     text-transform: capitalize;
     color: var(--font-dark);
     transition: 250ms all ease;
+}
+nav a:focus {
+    outline: var(--primary) 2px solid;
+    padding: .25rem;
+}
+nav a:focus:not(:focus-visible) {
+    outline: none;
+    padding: 0;
 }
 .wrapper.active .drop-down-menu .bars {
     background-color: transparent;
@@ -198,7 +213,9 @@ main .container {
     font-size: .93rem;
 }
 .img-container img {
+    height: 100%;
     width: 100%;
+    max-width: 100%;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
     object-position: center;
@@ -219,6 +236,12 @@ main .container {
     text-decoration: none;
     color: var(--btn-font);
     font-size: .95rem;
+}
+.card .read-more a:focus-visible {
+    outline: var(--bg-dark) solid 2px;
+}
+.card .read-more a:focus:not(:focus-visible) {
+    outline: none;
 }
 /*////////// MAIN END //////////*/
 

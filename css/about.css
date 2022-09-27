@@ -35,6 +35,11 @@ a:visited {
 a:hover {
     color: var(--primary);
 }
+img {
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    color: var(--primary);
+}
 /*////////// NAVBAR START //////////*/
 nav .container {
     position: relative;
@@ -68,6 +73,8 @@ nav .logo img {
     top: .5rem;
     left: 2rem;
     width: 13rem;
+    height: 100%;
+    max-width: 100%;
 }
 nav ul {
     display: flex;
@@ -84,6 +91,14 @@ nav ul li a {
     text-transform: capitalize;
     color: var(--font-dark);
     transition: 250ms all ease;
+}
+nav a:focus {
+    outline: var(--primary) 2px solid;
+    padding: .25rem;
+}
+nav a:focus:not(:focus-visible) {
+    outline: none;
+    padding: 0;
 }
 .wrapper.active .drop-down-menu .bars {
     background-color: transparent;
@@ -191,6 +206,14 @@ main {
 .left-section .social a:nth-child(5) {
     color: var(--icon-5);
 }
+.left-section .social a:focus-visible {
+    outline: var(--primary) solid 2px;
+    padding: .35rem;
+}
+.left-section .social a:focus:not(:focus-visible) {
+    outline: none;
+    padding: 0;
+}
 .container .right-section {
     display: flex;
     align-items: center;
@@ -198,7 +221,8 @@ main {
     margin: 3.5rem 0 0 6rem;
 }
 .right-section img {
-    height: auto;
+    height: 100%;
+    max-width: 100%;
     width: 55%;
     border-radius: 10px;
     box-shadow: -2px 5px 10px 3px rgba(0, 0, 0, .7);

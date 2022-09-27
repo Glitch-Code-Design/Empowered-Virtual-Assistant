@@ -63,6 +63,8 @@ nav .logo img {
     top: .5rem;
     left: 1.5rem;
     width: 13rem;
+    height: 100%;
+    max-width: 100%;
 }
 nav ul {
     display: flex;
@@ -79,6 +81,14 @@ nav ul li a {
     text-transform: capitalize;
     color: var(--font-dark);
     transition: 250ms all ease;
+}
+nav a:focus {
+    outline: var(--primary) 2px solid;
+    padding: .25rem;
+}
+nav a:focus:not(:focus-visible) {
+    outline: none;
+    padding: 0;
 }
 .wrapper.active .drop-down-menu .bars {
     background-color: transparent;

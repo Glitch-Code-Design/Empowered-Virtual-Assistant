@@ -27,6 +27,11 @@ body {
 a:visited {
     color: var(--font-dark);
 }
+img {
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    color: var(--primary);
+}
 /*////////// MAIN START //////////*/
 .container {
     display: flex;
@@ -40,6 +45,8 @@ img {
     margin-top: 5.5rem;
     position: relative;
     width: 20rem;
+    height: 100%;
+    max-width: 100%;
 }
 header h2 {
     font-size: 1.35rem;
@@ -66,6 +73,14 @@ header h2 {
 }
 .btn:hover {
     background-color: var(--primary-dark);
+}
+.btn a:focus-visible {
+    outline: var(--bg-dark) 2px solid;
+    padding: .25rem;
+}
+.btn a:focus:not(:focus-visible) {
+    outline: none;
+    padding: 0;
 }
 /*////////// NAVBAR END //////////*/
 
