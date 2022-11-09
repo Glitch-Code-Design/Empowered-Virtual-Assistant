@@ -212,7 +212,7 @@ nav a:focus:not(:focus-visible) {
 }
 .right-section img {
     object-fit: contain;
-    position: relative;
+    margin: 15px auto;
     width: 62vw;
     animation: rightSection 850ms ease-in;
 }
