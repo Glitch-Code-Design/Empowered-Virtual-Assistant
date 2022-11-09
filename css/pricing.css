@@ -37,7 +37,7 @@ nav .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 81rem;
+    max-width: 77rem;
     margin: 0 auto;
     padding: .15rem;
 }
@@ -146,8 +146,8 @@ main {
 .container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    max-width: 81rem;
-    margin: 30px auto;
+    max-width: 75rem;
+    margin: 28px auto;
 }
 .card-container {
     display: flex;
