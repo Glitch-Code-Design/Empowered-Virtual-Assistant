@@ -43,7 +43,7 @@ nav .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 81rem;
+    max-width: 77rem;
     margin: 0 auto;
     padding: .15rem;
 }
@@ -143,15 +143,11 @@ nav a:focus:not(:focus-visible) {
 /*////////// NAVBAR END //////////*/
 
 /*////////// MAIN START //////////*/
-.container {
+.main-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    max-width: 1440px;
-    margin: 4rem;
+    grid-template-columns: repeat(2,1fr);
 }
-.left-section {
+.left-section {  
     animation: leftSection 850ms ease-in;
 }
 @keyframes leftSection {
@@ -164,12 +160,11 @@ nav a:focus:not(:focus-visible) {
         transform: translateY(0);
     }
 }
-.left-section {
-    margin-top: 2rem;
-}
 .left-section header {
     position: relative;
-    bottom: 5rem;
+    left: 3rem;
+    margin: 100px auto;
+    text-transform: capitalize;
 }
 .left-section header h2,
 .left-section header span{
@@ -215,17 +210,10 @@ nav a:focus:not(:focus-visible) {
 .left-section .btn a:focus:not(:focus-visible){
     outline: none;
 }
-.right-section {
-    height: 100%;
-    width: 100%;
-}
 .right-section img {
     object-fit: contain;
     position: relative;
     width: 62vw;
-    height: 100%;
-    bottom: 3rem;
-    left: 4rem;
     animation: rightSection 850ms ease-in;
 }
 @keyframes rightSection {
@@ -454,7 +442,7 @@ nav a:focus:not(:focus-visible) {
         color: var(--btn-font);
     }
     .right-section img {
-        opacity: 85%;
+        opacity: 95%;
     }
 }
 /*////////// DARK MODE COLOR SCHEME END //////////*/
