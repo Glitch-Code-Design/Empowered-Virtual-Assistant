@@ -231,7 +231,7 @@ main {
 /*////////// MAIN END //////////*/
 
 /*////////// MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 914px) {
+@media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
     }
@@ -295,74 +295,10 @@ main {
         width: 75%;
     }
 }
-@media screen and (max-width: 1023px) and (orientation: landscape) {
-    .no-scroll {
-        overflow-y: hidden;
-    }
-    @keyframes fadeInOnLoad {
-        0% {
-            opacity: 1;
-        }
-    }
-    .wrapper.active .links {
-        transform: translateY(0);
-    }
-    nav .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-right: 4rem;
-    }
-    nav .container .links {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--primary);
-        transform: translateY(-100%);
-        transition: 500ms;
-        z-index: 5;
-    }
-    nav .links ul {
-        flex-direction: column;
-    }
-    nav .container .links ul li {
-        position: relative;
-        font-size: .9rem;
-        text-align: center;
-        margin: 0 auto;
-        padding: 1.5rem;
-    }
-    nav .links ul li a {
-        color: var(--btn-font);
-    }
-    .wrapper.active .bars::before,
-    .wrapper.active .bars::after {
-        background-color: var(--btn-font);
-    }
-    .drop-down-menu {
-        display: flex;
-        position: absolute;
-        right: 90%;
-    }
-    .container {
-        grid-template-columns: 1fr;
-        grid-gap: 1.25rem;
-    }
-    .card-container {
-        height: 100vh;
-        width: 65%;
-    }
-}
 /*////////// MEDIA QUERY'S END //////////*/
 
 /*////////// DARK MODE MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 1023px) and (prefers-color-scheme: dark) {
+@media screen and (max-width: 996px) and (prefers-color-scheme: dark) {
     nav .container .links {
         background-color: var(--primary-dark);
     }
