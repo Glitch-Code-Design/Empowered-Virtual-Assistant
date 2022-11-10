@@ -21,7 +21,7 @@
 }
 body {
     min-height: 100vh;
-    min-width: 100%;
+    width: 100%;
     background: var(--bg-light);
     cursor: default;
 }
@@ -81,7 +81,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 1.025rem;
+    font-size: clamp(.9rem, 4vw, 1.025rem);
     letter-spacing: .5px;
     text-transform: capitalize;
     color: var(--font-dark);
@@ -161,9 +161,7 @@ nav a:focus:not(:focus-visible) {
     }
 }
 .left-section header {
-    position: relative;
-    left: 3rem;
-    margin: 100px auto;
+    margin: 6.25rem 0 5rem 3rem;
     text-transform: capitalize;
 }
 .left-section header h2,
@@ -172,14 +170,14 @@ nav a:focus:not(:focus-visible) {
     flex-direction: column;
     justify-content: center;
     text-transform: capitalize;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     letter-spacing: 1px;
     line-height: 1.3;
     color: var(--font-dark);
 }
 .left-section p {
+    font-size: clamp(1rem, 4vw, 1.1rem);
     margin-top: .25rem;
-    font-size: 1rem;
     line-height: 1.5;
     letter-spacing: .5px;
     color: var(--font-dark);
@@ -196,7 +194,7 @@ nav a:focus:not(:focus-visible) {
 .left-section .btn a {
     text-decoration: none;
     color: var(--btn-font);
-    font-size: .9rem;
+    font-size: clamp(.8rem, 3vw, 1rem);
     text-transform: uppercase;
 }
 .left-section .btn:hover {
@@ -228,7 +226,7 @@ nav a:focus:not(:focus-visible) {
 /*////////// MAIN END //////////*/
 
 /*////////// MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 914px) {
+@media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
     }
@@ -266,7 +264,6 @@ nav a:focus:not(:focus-visible) {
     }
     nav .container .links ul li {
         position: relative;
-        font-size: .9rem;
         text-align: center;
         margin: 0 auto;
         padding: 2.5rem;
@@ -283,126 +280,29 @@ nav a:focus:not(:focus-visible) {
     .wrapper.active .bars::after {
         background-color: var(--btn-font);
     }
-    .container {
+    .main-container {
+        display: grid;
         grid-template-columns: 1fr;
-    }
-    @keyframes leftSection {
-        0% {
-            opacity: 0;
-            transform: translateY(-5%);
-        }
-    }
-    .left-section header {
-        bottom: 1rem;
         text-align: center;
     }
-    .left-section header h2,
-    .left-section header span{
-        font-size: 1.5rem;
+    .main-container .left-section header {
+        margin: 75px auto;
+        max-width: 87%;
     }
-    .left-section p{
-        font-size: .9rem;
-    }
-    .left-section .btn {
-        padding: .5rem;
-    }
-    .left-section .btn a {
-        font-size: .8rem;
+    .main-container .left-section p {
+        margin: 1rem;
     }
     .right-section img {
-        position: relative;
-        top: 2rem;
-        bottom: 0;
-        left: 1.25rem;
-        width: 89vw;
+        width: 90%;
     }
     @keyframes rightSection {
         0% {
             opacity: 0;
-            transform: translateY(5%);
+            transform: translateY(-3%);
         }
-    }
-}
-@media screen and (max-width: 1023px) and (orientation: landscape) {
-    .no-scroll {
-        overflow-y: hidden;
-    }
-    @keyframes fadeInOnLoad {
-        0% {
+        100% {
             opacity: 1;
         }
-    }
-    .wrapper.active .links {
-        transform: translateY(0);
-    }
-    nav .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-right: 4rem;
-    }
-    nav .container .links {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--primary);
-        transform: translateY(-100%);
-        transition: 500ms;
-        z-index: 5;
-    }
-    nav .links ul {
-        flex-direction: column;
-    }
-    nav .container .links ul li {
-        position: relative;
-        font-size: .9rem;
-        text-align: center;
-        margin: 0 auto;
-        padding: 1.5rem;
-    }
-    nav .links ul li a {
-        color: var(--btn-font);
-    }
-    .wrapper.active .bars::before,
-    .wrapper.active .bars::after {
-        background-color: var(--btn-font);
-    }
-    .drop-down-menu {
-        display: flex;
-        position: absolute;
-        right: 90%;
-    }
-    .container {
-        grid-template-columns: 1fr;
-    }
-    @keyframes leftSection {
-        0% {
-            opacity: 0;
-            transform: translateY(-20%);
-        }
-    }
-    .left-section header {
-        bottom: 1rem;
-        text-align: center;
-    }
-    .left-section header h2,
-    .left-section header span{
-        font-size: 1.5rem;
-    }
-    .left-section p{
-        font-size: .9rem;
-    }
-    .left-section .btn {
-        font-size: .8rem;
-    }
-    .right-section img {
-        display: none;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/
