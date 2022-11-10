@@ -449,6 +449,9 @@ footer .consultation h4 a:focus:not(:focus-visible) {
         margin: 100px auto;
         max-width: 73rem;
     }
+    .modal-container .modal-popup {
+        height: 80%;
+    }
 }
 /*////////// MEDIA QUERY'S END //////////*/
 

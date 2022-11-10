@@ -456,7 +456,7 @@ main {
 /*////////// MEDIA QUERY'S END //////////*/
 
 /*////////// DARK MODE MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 1023px) and (prefers-color-scheme: dark) {
+@media screen and (max-width: 996px) and (prefers-color-scheme: dark) {
     nav .container .links {
         background-color: var(--primary-dark);
     }
