@@ -78,7 +78,7 @@ nav ul {
     list-style: none;
 }
 nav ul li {
-    margin-left: 4rem;
+    margin: 0 1rem 0 4rem;
 }
 nav ul li a {
     text-decoration: none;
@@ -151,25 +151,25 @@ main {
 }
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    width: 100vw;
+    grid-template-columns: repeat(4,1fr);
     grid-gap: 1rem;
-    padding: 20px;
-    margin-top: 3.5rem;
+    max-width: 75rem;
+    margin: 40px auto;
 }
 .container .card {
-    position: relative;
-    height: 25rem;
-    border-radius: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
-    background: var(--primary);
-    box-shadow: 2px 8px 7px 1.5px rgba(0, 0, 0, .7);
-    animation: card 750ms ease-in;
+    padding: 2.5rem;
+    border-radius: 10px;
+    max-width: 20rem;
     transition: 400ms ease all;
+    animation: card 750ms ease-in;
+}
+.container .card:hover {
+    transform: translateY(-1rem);
 }
 @keyframes card {
     0% {
@@ -179,46 +179,28 @@ main {
         opacity: 1;
     }
 }
-.container .card:hover {
-    transform: translateY(-2rem);
-}
-.container header,
-.container .content {
-    color: var(--btn-font);
+.container .card header {
     text-transform: capitalize;
-    padding: .5rem;
-    line-height: 1.5;
+    margin: .25rem;
+}
+.container .card header h3,
+.container .card header h4 {
     letter-spacing: .5px;
 }
-.container header h3,
-.container header h4 {
-    position: relative;
-    bottom: 2rem;
+.container .card header h3 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
 }
-.container header .star-ratings {
-    position: relative;
-    bottom: .75rem;
-    letter-spacing: 3px;
+.container .card header h4 {
+    font-size: clamp(1rem, 4vw, 1rem);
+    margin: .25rem;
 }
-.container header h3 {
-    font-size: 1.1rem;
-    opacity: 97%;
-}
-.container header h4,
-.container header .star-ratings {
-    font-size: 1rem;
-    opacity: 95%;
-}
-.container .content{
-    font-size: .95rem;
-}
-.container .content p i {
-    opacity: 80%;
+.container .card .content p {
+    font-size: clamp(.85rem, 4vw, 1.025rem);
 }
 /*////////// MAIN END //////////*/
 
 /*////////// MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 914px) {
+@media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
     }
@@ -273,73 +255,21 @@ main {
     .wrapper.active .bars::after {
         background-color: var(--btn-font);
     }
-    .container .content{
-        font-size: .9rem;
+    main .container {
+        grid-template-columns: 1fr;
+        max-width: 80%;
     }
 }
-@media screen and (max-width: 1023px) and (orientation: landscape) {
-    .no-scroll {
-        overflow-y: hidden;
-    }
-    @keyframes fadeInOnLoad {
-        0% {
-            opacity: 1;
-        }
-    }
-    .wrapper.active .links {
-        transform: translateY(0);
-    }
-    nav .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-right: 4rem;
-    }
-    nav .container .links {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--primary);
-        transform: translateY(-100%);
-        transition: 500ms;
-        z-index: 5;
-    }
-    nav .links ul {
-        flex-direction: column;
-    }
-    nav .container .links ul li {
-        position: relative;
-        font-size: .9rem;
-        text-align: center;
-        margin: 0 auto;
-        padding: 1.5rem;
-    }
-    nav .links ul li a {
-        color: var(--btn-font);
-    }
-    .wrapper.active .bars::before,
-    .wrapper.active .bars::after {
-        background-color: var(--btn-font);
-    }
-    .drop-down-menu {
-        display: flex;
-        position: absolute;
-        right: 90%;
-    }
-    .container .content{
-        font-size: .95rem;
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+    main .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 80%;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/
 
 /*////////// DARK MODE MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 1023px) and (prefers-color-scheme: dark) {
+@media screen and (max-width: 996px) and (prefers-color-scheme: dark) {
     nav .container .links {
         background-color: var(--primary-dark);
     }
