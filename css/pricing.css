@@ -231,6 +231,16 @@ main {
 /*////////// MAIN END //////////*/
 
 /*////////// MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 280px) {
+    nav .logo img {
+        width: 85%;
+        left: 2.3rem;
+    }
+    .card {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
@@ -292,7 +302,18 @@ main {
     }
     .card-container {
         height: 55vh;
-        width: 75%;
+        max-width: 75%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+    main .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 80%;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 654px ) {
+    nav .container .links ul li {
+        padding: .85rem;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/

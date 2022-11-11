@@ -226,6 +226,12 @@ nav a:focus:not(:focus-visible) {
 /*////////// MAIN END //////////*/
 
 /*////////// MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 280px) {
+    nav .logo img {
+        width: 85%;
+        left: 2.3rem;
+    }
+}
 @media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
@@ -255,7 +261,7 @@ nav a:focus:not(:focus-visible) {
         height: 100%;
         width: 100%;
         background-color: var(--primary);
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         transition: 500ms;
         z-index: 5;
     }
@@ -303,6 +309,11 @@ nav a:focus:not(:focus-visible) {
         100% {
             opacity: 1;
         }
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 654px ) {
+    nav .container .links ul li {
+        padding: .85rem;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/

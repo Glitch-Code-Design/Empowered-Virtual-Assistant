@@ -85,21 +85,6 @@ body {
 }
 /*////////// MAIN START //////////*/
 
-/*////////// MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 1023px) {
-    .container header {
-        font-size: 1.3rem;
-    }
-    .container p,
-    .container ul li {
-        font-size: .9rem;
-    }
-    .container span {
-        font-size: 1rem;
-    }
-}
-/*////////// MEDIA QUERY'S END //////////*/
-
 /*////////// DARK MODE COLOR SCHEME START //////////*/
 @media screen and ( prefers-color-scheme: dark ) {
     html {

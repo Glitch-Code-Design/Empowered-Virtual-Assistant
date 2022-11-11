@@ -358,6 +358,12 @@ footer .consultation h4 a:focus:not(:focus-visible) {
 /*////////// FOOTER / MODAL END //////////*/
 
 /*////////// MEDIA QUERY'S START //////////*/
+@media screen and (max-width: 280px) {
+    nav .logo img {
+        width: 85%;
+        left: 2.3rem;
+    }
+}
 @media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
@@ -451,6 +457,11 @@ footer .consultation h4 a:focus:not(:focus-visible) {
     }
     .modal-container .modal-popup {
         height: 80%;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 654px ) {
+    nav .container .links ul li {
+        padding: .85rem;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/

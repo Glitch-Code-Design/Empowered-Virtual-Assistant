@@ -246,7 +246,17 @@ main .container {
 /*////////// MAIN END //////////*/
 
 /*////////// MEDIA QUERY'S START //////////*/
-@media screen and (max-width: 914px) {
+@media screen and (max-width: 280px) {
+    nav .logo img {
+        width: 85%;
+        left: 2.3rem;
+    }
+    .card {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
     }
@@ -308,6 +318,11 @@ main .container {
         grid-template-columns: repeat(1, 300px);
         grid-template-rows: repeat(2, 500px);
         grid-gap: 1.25rem;
+        max-width: 80%;
+    }
+    .card {
+        max-width: 80%;
+        margin: 0 auto;
     }
     .card header {
         height: 100%;
@@ -321,75 +336,18 @@ main .container {
     font-size: .9rem;
     }
 }
-@media screen and (min-width: 914px) and (max-width: 1138px) {
+@media screen and (min-width: 768px) and (max-width: 1180px) {
     main .container {
-        grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(2, 500px);
-        grid-gap: 1.25rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        max-width: 65%;
+        margin: 0 auto;
     }
 }
-@media screen and (max-width: 1023px) and (orientation: landscape) {
-    .no-scroll {
-        overflow-y: hidden;
-    }
-    @keyframes fadeInOnLoad {
-        0% {
-            opacity: 1;
-        }
-    }
-    .wrapper.active .links {
-        transform: translateY(0);
-    }
-    nav .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-right: 4rem;
-    }
-    nav .container .links {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--primary);
-        transform: translateY(-100%);
-        transition: 500ms;
-        z-index: 5;
-    }
-    nav .links ul {
-        flex-direction: column;
-    }
+@media screen and (orientation: landscape) and (max-width: 654px ) {
     nav .container .links ul li {
-        position: relative;
-        font-size: .9rem;
-        text-align: center;
-        margin: 0 auto;
-        padding: 1.5rem;
-    }
-    nav .links ul li a {
-        color: var(--btn-font);
-    }
-    .wrapper.active .bars::before,
-    .wrapper.active .bars::after {
-        background-color: var(--btn-font);
-    }
-    .drop-down-menu {
-        display: flex;
-        position: absolute;
-        right: 90%;
-    }
-    .container .content{
-        font-size: .95rem;
-    }
-    main .container {
-        grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(2, 500px);
-        grid-gap: 1.25rem;
+        padding: .85rem;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/
