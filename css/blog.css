@@ -87,8 +87,8 @@ nav .logo img {
     position: relative;
     top: .5rem;
     left: 1.5rem;
-    height: 100%;
     width: 13rem;
+    height: 100%;
     max-width: 100%;
 }
 nav ul {
@@ -251,9 +251,13 @@ main .container {
         width: 85%;
         left: 2.3rem;
     }
-    .card {
-        max-width: 80%;
+    main .container {
+        max-width: 90%;
+    }
+    main .container .card {
         margin: 0 auto;
+        max-width: 80%;
+        margin-top: 2rem;
     }
 }
 @media screen and (max-width: 996px) {
