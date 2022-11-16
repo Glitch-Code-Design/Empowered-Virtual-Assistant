@@ -318,31 +318,26 @@ main .container {
         grid-template-columns: repeat(1, 300px);
         grid-template-rows: repeat(2, 500px);
         grid-gap: 1.25rem;
-        max-width: 80%;
+        margin-bottom: 5rem;
     }
     .card {
-        max-width: 80%;
         margin: 0 auto;
+        margin: 3rem 0 0 0;
     }
     .card header {
         height: 100%;
         position: relative;
         top: .5rem;
         opacity: 95%;
-        font-size: .9rem;
-    }
-    .card .taglines,
-    .card .date {
-    font-size: .9rem;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1180px) {
     main .container {
         grid-template-columns: repeat(2, 1fr);
+        max-width: 80%;
     }
     .card {
-        max-width: 65%;
-        margin: 0 auto;
+        max-width: 81rem;
     }
 }
 @media screen and (orientation: landscape) and (max-width: 654px ) {
