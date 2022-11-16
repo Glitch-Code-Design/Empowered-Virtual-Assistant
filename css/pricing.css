@@ -149,6 +149,15 @@ main .container {
     grid-gap: 1.5rem;
     max-width: 58rem;
     margin: 40px auto;
+    animation: card ease-in 750ms;
+}
+@keyframes card {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 main .container .card {
     display: flex;

@@ -166,9 +166,9 @@ main {
     border-radius: 10px;
     max-width: 20rem;
     transition: 400ms ease all;
-    animation: card 750ms ease-in;
     background-color: var(--primary);
     color: var(--btn-font);
+    animation: card 750ms ease-in;
 }
 .container .card:hover {
     transform: translateY(-1rem);

@@ -25,7 +25,7 @@
 }
 body {
     min-height: 100vh;
-    min-width: 100%;
+    width: 100%;
     background: var(--bg-light);
     cursor: default;
 }
@@ -71,10 +71,9 @@ nav .logo {
 nav .logo img {
     position: relative;
     top: .5rem;
-    left: 2rem;
-    width: 13rem;
+    left: 1.5rem;
     height: 100%;
-    max-width: 100%;
+    width: 13rem;
 }
 nav ul {
     display: flex;
@@ -86,7 +85,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 1.025rem;
+    font-size: clamp(.9rem, 4vw, 1.025rem);
     letter-spacing: .5px;
     text-transform: capitalize;
     color: var(--font-dark);
@@ -126,8 +125,8 @@ nav a:focus:not(:focus-visible) {
     position: relative;
     background-color: var(--primary);
     border-radius: 5px;
-    margin-top: 1.5rem;
     transition: 400ms;
+    margin-top: 1.5rem;
 }
 .bars::before,
 .bars::after {
@@ -175,7 +174,7 @@ main {
 .left-section p {
     max-width: 700px;
     line-height: 1.4;
-    font-size: .95rem;
+    font-size: clamp(.75rem, 4vw, .95rem);
     color: var(--font-dark);
     padding: 1rem;
 }
@@ -188,7 +187,7 @@ main {
 }
 .left-section .social a {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 4vw, 1.4rem);
     margin-right: 2.5rem;
 }
 .left-section .social a:nth-child(1) {
@@ -246,80 +245,15 @@ main {
         width: 85%;
         left: 2.3rem;
     }
-}
-@media screen and (max-width: 768px) {
-    .no-scroll {
-        overflow-y: hidden;
-    }
-    @keyframes fadeInOnLoad {
-        0% {
-            opacity: 1;
-        }
-    }
-    .wrapper.active .links {
-        transform: translateY(0);
-    }
-    nav .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-right: 4rem;
-    }
-    nav .container .links {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--primary);
-        transform: translateY(-100%);
-        transition: 500ms;
-        z-index: 5;
-    }
-    nav .links ul {
-        flex-direction: column;
-    }
-    nav .container .links ul li {
-        position: relative;
-        font-size: .9rem;
+    .left-section {
         text-align: center;
-        margin: 0 auto;
-        padding: 1.5rem;
+        max-width: 90%;
     }
-    nav .links ul li a {
-        color: var(--btn-font);
-    }
-    .drop-down-menu {
-        display: flex;
-        position: absolute;
-        right: 87%;
-    }
-    .wrapper.active .bars::before,
-    .wrapper.active .bars::after {
-        background-color: var(--btn-font);
-    }
-    main .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    max-width: 95%;
-    }
-    .left-section p {
-        position: relative;
-        right: .65rem;
-        font-size: .9rem;
-    }
-    .left-section .social i {
-        font-size: .9rem;
-    }
-    .right-section img{
-    display: none;
+    .left-section .social a {
+        margin-right: 1.5rem;
     }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 996px) {
     .no-scroll {
         overflow-y: hidden;
     }
@@ -348,7 +282,7 @@ main {
         height: 100%;
         width: 100%;
         background-color: var(--primary);
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         transition: 500ms;
         z-index: 5;
     }
@@ -357,7 +291,6 @@ main {
     }
     nav .container .links ul li {
         position: relative;
-        font-size: .9rem;
         text-align: center;
         margin: 0 auto;
         padding: 2.5rem;
@@ -368,74 +301,6 @@ main {
     .drop-down-menu {
         display: flex;
         position: absolute;
-        right: 91%;
-    }
-    .wrapper.active .bars::before,
-    .wrapper.active .bars::after {
-        background-color: var(--btn-font);
-    }
-    .left-section {
-        font-size: .9rem;
-    }
-    .container .right-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: .25rem 0 0 2rem;
-    }
-    .right-section img {
-        width: 75%;
-    }
-}
-@media screen and (max-width: 926px) and (orientation: landscape) {
-    .no-scroll {
-        overflow-y: hidden;
-    }
-    @keyframes fadeInOnLoad {
-        0% {
-            opacity: 1;
-        }
-    }
-    .wrapper.active .links {
-        transform: translateY(0);
-    }
-    nav .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-right: 4rem;
-    }
-    nav .container .links {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--primary);
-        transform: translateY(-100%);
-        transition: 500ms;
-        z-index: 5;
-    }
-    nav .links ul {
-        flex-direction: column;
-    }
-    nav .container .links ul li {
-        position: relative;
-        font-size: .9rem;
-        text-align: center;
-        margin: 0 auto;
-        padding: 1.5rem;
-    }
-    nav .links ul li a {
-        color: var(--btn-font);
-    }
-    .drop-down-menu {
-        display: flex;
-        position: absolute;
         right: 87%;
     }
     .wrapper.active .bars::before,
@@ -443,31 +308,17 @@ main {
         background-color: var(--btn-font);
     }
     main .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
-    }
-    .left-section {
-        font-size: .9rem;
-    }
-    .left-section .social i {
-        margin: 1rem 0 2rem 3rem;
-    }
-    .right-section img {
+        max-width: 95%;
+        }
+        .left-section p {
+            position: relative;
+            right: .65rem;
+        }
+        .right-section img{
         display: none;
-    }
-}
-@media screen and (orientation: landscape) and (max-width: 654px ) {
-    nav .container .links ul li {
-        padding: .85rem;
-    }
-}
-@media screen and (orientation: landscape) and (min-width: 655px ) and (max-width: 916px) {
-    nav .container .links ul li {
-        padding: 1.5rem;
-    }
+        }
 }
 /*////////// MEDIA QUERY'S END //////////*/
 
