@@ -252,23 +252,20 @@ form .btn a:focus:not(:focus-visible) {
 
 /*////////// FOOTER / MODAL START //////////*/
 footer {
-    position: fixed;
-    left: 0;
+    position: absolute;
     bottom: 0;
     text-align: center;
-    background-color: var(--primary);
     width: 100%;
-    padding: .25rem;
-    text-decoration: none;
+    background-color: var(--primary);
+    text-transform: capitalize;
+    letter-spacing: .5px;
 }
 footer .consultation h4 a {
-    font-size: clamp(.8rem, 4vw, .95rem);
-    letter-spacing: .5px;
-    font-weight: 400;
     color: var(--btn-font);
-    opacity: 95%;
+    opacity: 85%;
+    font-weight: 400;
+    font-size: clamp(.85rem, 4vw, .95rem);
     text-decoration: none;
-    text-transform: capitalize;
 }
 footer .consultation h4 a:focus-visible {
     outline: var(--bg-dark) solid 2px;
@@ -462,6 +459,11 @@ footer .consultation h4 a:focus:not(:focus-visible) {
 @media screen and (orientation: landscape) and (max-width: 654px ) {
     nav .container .links ul li {
         padding: .85rem;
+    }
+}
+@media screen and (orientation: landscape) and (min-width: 655px ) and (max-width: 916px) {
+    nav .container .links ul li {
+        padding: 1.5rem;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/

@@ -315,6 +315,17 @@ nav a:focus:not(:focus-visible) {
     nav .container .links ul li {
         padding: .85rem;
     }
+    .right-section img {
+        width: 85%;
+    }
+}
+@media screen and (orientation: landscape) and (min-width: 655px ) and (max-width: 916px) {
+    nav .container .links ul li {
+        padding: 1.5rem;
+    }
+    .right-section img {
+        width: 75%;
+    }
 }
 /*////////// MEDIA QUERY'S END //////////*/
 
