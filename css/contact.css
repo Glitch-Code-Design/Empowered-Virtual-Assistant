@@ -79,7 +79,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 1.025rem;
+    font-size: clamp(.9rem, 4vw, 1.025rem);
     letter-spacing: .5px;
     text-transform: capitalize;
     color: var(--font-dark);
@@ -262,7 +262,7 @@ footer {
 }
 footer .consultation h4 a {
     color: var(--btn-font);
-    opacity: 85%;
+    opacity: 95%;
     font-weight: 400;
     font-size: clamp(.85rem, 4vw, .95rem);
     text-decoration: none;
@@ -467,6 +467,28 @@ footer .consultation h4 a:focus:not(:focus-visible) {
         height: 80%;
     }
 }
+@media screen and (orientation: landscape) and (max-width: 654px ) {
+    nav .container .links ul li {
+        padding: .85rem;
+    }
+    .right-section img {
+        width: 85%;
+    }
+    footer {
+        display: none;
+    }
+}
+@media screen and (orientation: landscape) and (min-width: 655px ) and (max-width: 916px) {
+    nav .container .links ul li {
+        padding: 1.5rem;
+    }
+    .right-section img {
+        width: 75%;
+    }
+    footer {
+        display: none;
+    }
+}
 /*////////// MEDIA QUERY'S END //////////*/
 
 /*////////// DARK MODE MEDIA QUERY'S START //////////*/
@@ -499,7 +521,7 @@ footer .consultation h4 a:focus:not(:focus-visible) {
     form .btn a,
     .modal-popup a {
         background: var(--btn-submit-light);
-        opacity: 93%;
+        opacity: 90%;
     }
     #checkbox {
         accent-color: var(--bg-dark);

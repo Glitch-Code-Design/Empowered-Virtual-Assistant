@@ -76,7 +76,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 1.025rem;
+    font-size: clamp(.9rem, 4vw, 1.025rem);
     letter-spacing: .5px;
     text-transform: capitalize;
     color: var(--font-dark);
@@ -189,7 +189,7 @@ main .container .card header h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: clamp(1.3rem, 4vw, 1.5rem);
-    opacity: 95%;
+    opacity: 90%;
 }
 main .container .card header h4 {
     text-transform: uppercase;
@@ -200,12 +200,12 @@ main .container .card header h4 {
 main .container .card header p {
     text-transform: capitalize;
     font-size: clamp(.95rem, 4vw, 1rem);
-    opacity: 85%;
+    opacity: 90%;
 }
 main .container .card .pricing h4 {
     font-size: clamp(1.9rem, 4vw, 2.4rem);
     margin: 1.75rem 2.5rem 1.75rem 2.5rem;
-    opacity: 75%;
+    opacity: 95%;
 }
 main .container .card .pricing h4 span {
     text-transform: capitalize;
@@ -217,7 +217,7 @@ main .container .card .services h4 {
     text-transform: capitalize;
     letter-spacing: .5px;
     font-size: clamp(1rem, 4vw, 1.1rem);
-    opacity: 85%;
+    opacity: 90%;
 }
 main .container .card .services ul {
     margin: 1rem 0 0 0;
@@ -228,7 +228,7 @@ main .container .card .services ul li {
     list-style: none;
     font-size: clamp(.8rem, 4vw, .9rem);
     text-transform: capitalize;
-    opacity: 90%;
+    opacity: 95%;
 }
 main .container .card .services ul li i {
     position: relative;
@@ -263,7 +263,7 @@ footer {
 }
 footer h4 {
     color: var(--btn-font);
-    opacity: 85%;
+    opacity: 95%;
     font-weight: 400;
     font-size: clamp(.85rem, 4vw, .95rem);
 }
@@ -353,6 +353,30 @@ footer h4 {
         bottom: 0;
     }
 }
+@media screen and (orientation: landscape) and (max-width: 654px ) {
+    nav .container .links ul li {
+        padding: .85rem;
+    }
+    .right-section img {
+        width: 85%;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
+@media screen and (orientation: landscape) and (min-width: 655px ) and (max-width: 1180px) {
+    nav .container .links ul li {
+        padding: 1.5rem;
+    }
+    .right-section img {
+        width: 75%;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+}
 /*////////// MEDIA QUERY'S END //////////*/
 
 /*////////// DARK MODE MEDIA QUERY'S START //////////*/
@@ -379,6 +403,17 @@ footer h4 {
     }
     main .container .card {
         background-color: var(--primary-dark);
+    }
+    main .container .card header h3,
+    main .container .card header h4,
+    main .container .card header p,
+    main .container .card .pricing h4,
+    main .container .card .pricing h4 span,
+    main .container .card .services h4 {
+        opacity: 85%;
+    }
+    main .container .card .services ul li {
+        opacity: 90%;
     }
     footer {
         background-color: var(--primary-dark);

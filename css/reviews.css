@@ -82,7 +82,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 1.025rem;
+    font-size: clamp(.9rem, 4vw, 1.025rem);
     letter-spacing: .5px;
     text-transform: capitalize;
     color: var(--font-dark);
@@ -314,6 +314,16 @@ main {
     .container header,
     .container .content {
         color: var(--font-light);
+    }
+    .container header h3,
+    .container header h4 {
+        opacity: 90%;
+    }
+    .container header .star-rating {
+        opacity: 87%;
+    }
+    .container p {
+        opacity: 95%;
     }
 }
 /*////////// DARK MODE COLOR SCHEME END //////////*/

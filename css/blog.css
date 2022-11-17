@@ -101,7 +101,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 1.025rem;
+    font-size: clamp(.9rem, 4vw, 1.025rem);
     letter-spacing: .5px;
     text-transform: capitalize;
     color: var(--font-dark);
@@ -210,7 +210,7 @@ main .container {
     position: relative;
     top: .5rem;
     opacity: 95%;
-    font-size: .93rem;
+    font-size: clamp(.85rem, 4vw, .93rem);
 }
 .img-container img {
     height: 100%;
@@ -225,7 +225,7 @@ main .container {
     height: 50%;
     width: 100%;
     margin: 0;
-    font-size: .95rem;
+    font-size: clamp(.85rem, 4vw, .95rem);
 }
 .card .preview-content {
     padding: .5rem;
@@ -235,7 +235,7 @@ main .container {
 .card .read-more a {
     text-decoration: none;
     color: var(--btn-font);
-    font-size: .95rem;
+    font-size: clamp(.85rem, 4vw, .95rem);
 }
 .card .read-more a:focus-visible {
     outline: var(--bg-dark) solid 2px;
@@ -315,9 +315,6 @@ main .container {
     .wrapper.active .bars::after {
         background-color: var(--btn-font);
     }
-    .container .content{
-        font-size: .9rem;
-    }
     main .container {
         grid-template-columns: repeat(1, 300px);
         grid-template-rows: repeat(2, 500px);
@@ -349,9 +346,12 @@ main .container {
         padding: .85rem;
     }
 }
-@media screen and (orientation: landscape) and (min-width: 655px ) and (max-width: 916px) {
+@media screen and (orientation: landscape) and (min-width: 655px ) and (max-width: 1180px) {
     nav .container .links ul li {
         padding: 1.5rem;
+    }
+    .card {
+        margin: 2rem 0 0 0;
     }
 }
 /*////////// MEDIA QUERY'S END //////////*/

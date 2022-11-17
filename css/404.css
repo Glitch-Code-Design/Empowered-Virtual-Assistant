@@ -91,6 +91,7 @@ header h2 {
     }
     .btn {
         font-size: .8rem;
+        margin-bottom: 2rem;
     }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
