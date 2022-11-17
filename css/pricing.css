@@ -143,7 +143,7 @@ main {
     align-items: center;
     justify-content: center;
 }
-main .container {
+.container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1.5rem;
@@ -159,7 +159,7 @@ main .container {
         opacity: 1;
     }
 }
-main .container .card {
+.container .card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,7 +173,7 @@ main .container .card {
     background-color: var(--primary);
     animation: card 750ms ease-in;
 }
-main .container .card:hover {
+.container .card:hover {
     transform: translateY(-1rem);
 }
 @keyframes card {
@@ -184,61 +184,61 @@ main .container .card:hover {
         opacity: 1;
     }
 }
-main .container .card header h3 {
+.container .card header h3 {
     margin: 0 0 1rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: clamp(1.3rem, 4vw, 1.5rem);
     opacity: 90%;
 }
-main .container .card header h4 {
+.container .card header h4 {
     text-transform: uppercase;
     letter-spacing: .25px;
     font-size: clamp(.95rem, 4vw, 1.1rem);
     opacity: 90%;
 }
-main .container .card header p {
+.container .card header p {
     text-transform: capitalize;
     font-size: clamp(.95rem, 4vw, 1rem);
     opacity: 90%;
 }
-main .container .card .pricing h4 {
+.container .card .pricing h4 {
     font-size: clamp(1.9rem, 4vw, 2.4rem);
     margin: 1.75rem 2.5rem 1.75rem 2.5rem;
     opacity: 95%;
 }
-main .container .card .pricing h4 span {
+.container .card .pricing h4 span {
     text-transform: capitalize;
     font-size: clamp(1rem, 4vw, 1.3rem);
     position: relative;
     bottom: .2rem;
 }
-main .container .card .services h4 {
+.container .card .services h4 {
     text-transform: capitalize;
     letter-spacing: .5px;
     font-size: clamp(1rem, 4vw, 1.1rem);
     opacity: 90%;
 }
-main .container .card .services ul {
+.container .card .services ul {
     margin: 1rem 0 0 0;
     line-height: 1.4;
 }
-main .container .card .services ul li {
+.container .card .services ul li {
     text-align: left;
     list-style: none;
     font-size: clamp(.8rem, 4vw, .9rem);
     text-transform: capitalize;
     opacity: 95%;
 }
-main .container .card .services ul li i {
+.container .card .services ul li i {
     position: relative;
     margin: .35rem 1rem 0 0;
 }
-main .container .card .services ul li span {
+.container .card .services ul li span {
     position: relative;
     right: .35rem;
 }
-main .container .card .contact {
+.container .card .contact {
     margin: 1.2rem 0 0 0;
 }
 main .container .card .contact a {

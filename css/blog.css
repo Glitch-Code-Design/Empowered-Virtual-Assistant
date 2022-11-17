@@ -168,7 +168,7 @@ main {
     align-items: center;
     justify-content: center;
 }
-main .container {
+.container {
     display: grid;
     grid-template-columns: repeat(3, 350px);
     grid-template-rows: repeat(2, 500px);
