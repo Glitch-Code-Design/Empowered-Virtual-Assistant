@@ -361,6 +361,16 @@ footer .consultation h4 a:focus:not(:focus-visible) {
         width: 85%;
         left: 2.3rem;
     }
+    .modal-container.modal {
+        height: 94vh;
+    }
+    .modal-container .modal-popup {
+        margin: 0;
+        padding: 0;
+    }
+    .modal-popup p{
+        width: 95%;
+    }
 }
 @media screen and (max-width: 996px) {
     .no-scroll {
