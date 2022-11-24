@@ -7,6 +7,7 @@
     font-family: 'poppins', sans-serif;
 }
 :root {
+    --max-lines: 3;
     --primary: #1aa5a3;
     --primary-dark: #107977;
     --font-light: #d3cfcf;
@@ -231,6 +232,12 @@ main {
     padding: .5rem;
     font-size: .9rem;
     opacity: 95%;
+}
+.card .preview-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--max-lines);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .card .read-more a {
     text-decoration: none;
